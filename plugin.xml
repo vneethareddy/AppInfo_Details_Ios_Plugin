@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://cordova.apache.org/ns/plugins/1.0"
+    id="neetha.appversion"
+    version="0.1.0">
+    <name>Appversion</name>
+    <!-- ios -->
+    <platform name="ios">    
+        <config-file target="config.xml" parent="/*">
+            <feature name="AppVersion">
+                <param name="ios-package" value="AppVersion" />
+            </feature>
+        </config-file>
+        <js-module src="www/AppVersion.js" name="AppVersion">
+            <clobbers target="appVersion" />
+        </js-module>
+        <header-file src="src/ios/AppVersion.h" />
+	    <source-file src="src/ios/AppVersion.m" />
+    </platform>
+</plugin>
